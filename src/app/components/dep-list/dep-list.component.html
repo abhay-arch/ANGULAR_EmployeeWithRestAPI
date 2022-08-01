@@ -1,0 +1,52 @@
+<p class="para">DEPARTMENT DETAILS</p>
+
+<div class="container">
+    <table class="table table-bordered table-primary table-striped">
+       <tr> 
+           <th>DEPARTMENT NO</th>
+           <th>DEPARTMENT NAME</th>
+           <th>LOCATION</th>
+           
+       </tr>
+       
+       <tr *ngFor = "let dep of departments " >
+           <td> {{dep.deptno}}</td>
+           <td> {{dep.departmentName}}</td>
+           <td> {{dep.location}}</td>
+                      
+       </tr>
+    </table>
+    
+    &nbsp;
+    &nbsp;
+    &nbsp;
+    <p class="subpara"> TO ADD DEPARTMENT</p>
+        <form class="ngForm" (ngSubmit)="onSubmit()">
+            <div class="row">
+                <div class="col-sm-3"><label>DEPARTMENT NUMBER</label></div>
+                <div class="col-sm-3"><input type="text" name="deptno" [(ngModel)]="formModel.deptno"></div>
+            </div>
+            &nbsp;             
+        
+            <div class="row">
+                <div class="col-sm-3"><label>DEPARTMENT NAME</label></div>
+                <div class="col-sm-3"><input type="text" name="departmentName" [(ngModel)]="formModel.departmentName"></div>
+            </div>
+            &nbsp;
+        
+            <div class="row">
+                <div class="col-sm-3"><label>LOCATION</label></div>
+                <div class="col-sm-3"><input type="text" name="location" [(ngModel)]="formModel.location"></div>
+            </div>
+            &nbsp;
+        
+            <div class="row">
+                <div class="col-sm-3"><input type="submit" name="submit" class="btn btn-lg btn-primary"></div>
+                <a class= " ankar" href="http://localhost:4200/">BACK TO HOME PAGE </a>
+            </div>
+        
+        </form>
+       
+</div>
+
+
